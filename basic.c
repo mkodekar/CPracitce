@@ -23,5 +23,9 @@ int main() {
   printf("Pi = %.3f\n\n", piVal);
   printf("Big Pi = %.10f \n\n",reallyBigPi);
   printf("The firstLetter in my name is %c\n\n",firstLetter);
-  printf("My name is %s\n", "Rehan Kodekar");
+  printf("My name is %s\n\n", "Rehan Kodekar");
+
+  char myName[] = "Rehan Kodekar";
+
+  printf("name is %s\n\n",MyName);
 }

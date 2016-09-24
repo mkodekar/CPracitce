@@ -18,14 +18,22 @@ void main() {
   printf("Amount of apple in dozen is %.2f Size of : %d\n\n", appleAmount.dozen, sizeof(appleAmount.dozen));
   printf("Amount of apple in dozen is %.d Size of : %d\n\n", appleAmount.individual, sizeof(appleAmount.individual));
 
+  typedef enum {INDIVIDUAL, DOZE}amountType;
+
   typedef struct {
     char *brand;
+    amountType amount;
     price appleAmount;
   } appleProduct;
 
-  appleProduct productOrdered = {"Raste ka maal", .appleAmount.dozen = 95};
+  appleProduct productOrdered = {"Raste ka maal", .appleAmount.individual = 9, .amount = INDIVIDUAL};
 
-  printf("You have to pay %.2f .Rs for %s product\n\n", productOrdered.appleAmount.dozen, productOrdered.brand);
+  if (productOrdered.amount == INDIVIDUAL) {
+      printf("You have to pay %.d .Rs for %s product\n\n", productOrdered.appleAmount.individual, productOrdered.brand);
+  } else {
+      printf("You have to pay %.2f .Rs for %s product\n\n", productOrdered.appleAmount.dozen, productOrdered.brand);
+  }
+
 
   typedef enum {INDIV, DOZEN} type;
 

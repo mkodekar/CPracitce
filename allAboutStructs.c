@@ -28,8 +28,8 @@ typedef struct anotherComputer {
 
 
 void setWarranty(struct computer *theComputer, int newWarranty) {
-  theComputer->warranty = newWarranty;
-  printf("The new warranty is %d\n\n", theComputer->warranty);
+  theComputer->warranty = newWarranty; // the can also be written as (*theComputer).warranty = newWarranty
+  printf("The new warranty is %d\n\n", theComputer->warranty);// the can also be written as (*theComputer).warranty = newWarranty
   // the -> means the variable in the struct theComputer
 
 }

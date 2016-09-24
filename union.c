@@ -27,4 +27,16 @@ void main() {
 
   printf("You have to pay %.2f .Rs for %s product\n\n", productOrdered.appleAmount.dozen, productOrdered.brand);
 
+  typedef enum {INDIV, DOZEN} type;
+
+  type typeThing = INDIV;
+
+  productOrdered.appleAmount.individual = 4;
+
+  if (typeThing == INDIV) {
+    printf("The price of one apple is  %d Rs \n", productOrdered.appleAmount.individual);
+  } else if (typeThing == DOZEN){
+    printf("You price of dozen of apples is %.2f Rs \n", productOrdered.appleAmount.dozen);
+  }
+
 }
